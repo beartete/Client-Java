@@ -19,13 +19,15 @@ public class Client implements Serializable {
     @Column(unique = true)
     private String email;
 
+    public Client() {
+    }
+
     public Client(int id, String email, String name) {
         this.id = id;
         this.email = email;
         this.name = name;
     }
     
-
     public String getName() {
         return name;
     }
