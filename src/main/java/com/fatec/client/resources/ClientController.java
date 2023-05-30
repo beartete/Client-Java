@@ -9,22 +9,20 @@ import com.fatec.client.entities.Client;
 
 @RestController
 public class ClientController {
-    
-    @GetMapping("client")
-    public Client getClient(){
-        Client c = new Client(1,"jaoa@gmail.com", "João Silva");
 
+    @GetMapping("client")
+    public Client getClient() {
+        Client c = new Client(1, "jaoa@gmail.com", "João Silva");
         return c;
     }
 
     @GetMapping("clients")
-    public List<Client> getClients(){
-        List <Client> clients = new ArrayList<Client>();
-        Client c1 = new Client(1,"joao@gmail.com","João Silva");
-        Client c2 = new Client(2,"maria@gmail.com","Maria");
+    public List<Client> getClients() {
+        List<Client> clients = new ArrayList<Client>();
+        Client c1 = new Client(1, "joao@gmail.com", "João Silva");
+        Client c2 = new Client(2, "maria@gmail.com", "Maria");
         clients.add(c1);
         clients.add(c2);
-
         return clients;
     }
 }
